@@ -81,3 +81,57 @@
 //alert(a);
 
 //alert(!1);            值为 false
+
+//while lianxi
+//var count =0;
+//while(count<12){
+//	console.info(count);
+//	count++;
+//}
+//var count =0;
+//do{
+//	console.info(count);
+//	count++;
+//}while(count<12);
+
+
+
+//function 方法
+//function multiply(num1,num2){
+//	alert(num1*num2);
+//	return 33;
+//}
+//
+//multiply(3,5);
+//alert(multiply(3,4));  
+//function ConvertTem(temp){
+//	var  result = temp-32;
+//	result=result/1.8;
+//	alert(result);
+//	return result;
+//}
+//ConvertTem(88);
+
+//var total =50;
+//function getTotal(t){
+//	 var total = 2232;
+//	return total;
+//}
+//getTotal();
+//alert(total)
+
+//var num =7.467;
+//var c = Math.round(num); //round 四舍五入
+//alert(c)
+
+var currentDate = new  Date();
+//alert(currentDate.getDay())
+alert(currentDate.getDate())
+
+
+
+
+
+
+
+
