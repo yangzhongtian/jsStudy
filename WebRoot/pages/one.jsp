@@ -21,9 +21,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
 	<!-- <script type="text/javascript" src="js/one.js"></script> -->
 	<script type="text/javascript" src="js/two.js"></script>
+	<style type="text/css">
+		body{
+			color:white;
+			background-color: black;
+		}
+	</style>
   </head>
   
   <body>
-    jsStudy
+    <p title="helel">what to buy</p>
+    <ol>
+    	<li>computer</li>
+    	<li>car</li>
+    	<li>budling</li>
+    </ol>
   </body>
 </html>
