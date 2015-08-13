@@ -20,6 +20,7 @@ ul{
 li{
 	float: left;
 	list-style: none;
+	display:inline;
 	padding: 50px;
 }
 IMG {
