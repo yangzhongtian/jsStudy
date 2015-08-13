@@ -19,10 +19,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	<link rel="stylesheet" type="text/css" href="styles/layout.css">
 	<script type="text/javascript" src="js/seven_two.js"></script>
   </head>
   
   <body>
-    This is my JSP page. <br>
+      <h1>图片列表显示</h1>
+    <p>
+    	<ul>
+    		<li>
+    			<a href="image/1.jpg" title="man" onclick="showPic(this);return false">man</a>
+    		</li>
+    		<li>
+    			<a href="image/2.jpg" title="sky" onclick="showPic(this);return false">天空</a>
+    		</li>
+    		<li>
+    			<a href="image/3.jpg" title="blue" onclick="showPic(this);return false">蓝</a>
+    		</li>
+    		<li>
+    			<a href="image/4.jpg" title="starSky" onclick="showPic(this);return false">星空</a>
+    		</li>
+    	</ul>
+    </p>
   </body>
 </html>
