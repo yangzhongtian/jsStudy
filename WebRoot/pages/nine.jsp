@@ -20,9 +20,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 	<script type="text/javascript" src="js/nine.js"></script>
+	<style type="text/css">
+		p:FIRST-LETTER{
+			color:blue;
+			font:50px 'Arial' ,sens -serif
+		}
+	</style>
   </head>
   
   <body>
-    This is my JSP page. <br>
+  	<p>
+  		测试css 代码段
+  	</p>
+   	<p style="color: #999999;font-family: 黑体,宋体,楷体;font-size: 55px" id="pp">
+   		这是测试style代码段
+   	</p>
+   	<script type="text/javascript">
+   		var para =document.getElementById('pp');
+   		//alert(typeof para.nodeName);
+   		//alert(typeof para.style)
+   		//console.info(para.style)
+   		//para.style.color='green';
+   		//alert(para.style.fontSize)
+   		//alert(para.style.fontFamily)
+   	</script>
+   	<p id='p2' >
+   		测试代码段2 style 测试代码段2
+   	</p>
+   	<script type="text/javascript">
+   		var para2 = document.getElementById('p2')
+   		//alert(para2.style.color)
+   		//para2.style.font="20px '楷体'"
+   	</script>
   </body>
 </html>
