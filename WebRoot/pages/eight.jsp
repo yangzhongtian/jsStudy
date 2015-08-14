@@ -19,14 +19,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	<style type="text/css">
+		body{
+			font-family: 'Helvetica','Arial',sans-serif;
+			font-size: 15px;
+		}
+		abbr {
+			text-decoration: underline;
+			border: 1;
+			font-style: italic;
+		}
+	</style>
 	<script type="text/javascript" src="js/eight.js"></script>
   </head>
   
   <body>
    <h1> what is the Document Object Model?</h1>
    
-   <p>
-   		The <abbr title="world wide web">w3c</abbr> define <abbr title="Document Object Model">Dom</abbr> as
+   <p id='one'>
+   		The <abbr title="world wide web" id='tes'><em>w3c</em></abbr> define <abbr title="Document Object Model">Dom</abbr> as
    </p>
    <blockquote cite="http://www.3c.org/Dom">
    	<p> 
