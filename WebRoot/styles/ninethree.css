@@ -24,9 +24,21 @@ th,td{
 	width: 10em;
 	padding: .5em;
 }
-tr:nth-child(odd){
+tr:nth-child(odd)#normal{
 	background-color: #ffc
 }
-tr:nth-child(even){
+tr:nth-child(even)#normal{
 	background-color: #fff
 }
+tr#ids{
+	background-color: #ccc
+}
+/**
+th:hover{
+	background-color: lightblue;
+}
+tr:hover{
+	font-weight:lighter;
+	color: green
+}
+*/
