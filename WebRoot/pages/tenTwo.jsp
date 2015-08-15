@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'ten.jsp' starting page</title>
+    <title>My JSP 'tenTwo.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -19,13 +19,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<script type="text/javascript" src="js/ten.js"></script>
-	<link rel="stylesheet" type="text/css" href="styles/ten.css">
+	<script type="text/javascript" src="js/tenTwo.js"></script>
   </head>
+  
   <body>
-	<p id='p1'>
-		测试移动的方块
-	</p>
-
+    <p id='p1' style="position: absolute;left: 0px;top: 0px"> 测试生成 的代码</p>
+    <p id='p2' style="position: absolute;left: 0px;top: 0px">测试生成的代码2</p>
+    <p id='p3' style="position: absolute;left: 0px;top: 0px">你追我赶</p>
   </body>
 </html>

@@ -1,36 +1,50 @@
-//alert("ten chapter")
-window.onload =function(){
-	var p1 =document.getElementById('p1');
-		p1.style.position="absolute";
-		 p1.style.left='0px';
-		 p1.style.top='0px';
-//	function moveP(){
-//		var x =parseInt( p1.style.left);
-//		var y =parseInt(p1.style.top);
+//var c=0;
+// test2 =function (){
 //		
-//		if(x<250){
-//			x++;
-//		}
-//		if(y<250){
-//			y++;
-//		}
-//		if(x>250){
-//			x--;
-//		}
-//		if(y>250){
-//			y--;
-//		}
-//		p1.style.top=y+'px';
-//		p1.style.left=x+'px';
-//		console.info(x+""+y);
-//		var move  = setTimeout("moveP()",1000);
-//	}
-		//moveP();
-		//setInterval(moveP(),100)
-		//p1.style.top=33+'px';
-		//p1.style.left=60+'px';
-		var c=0;
-		function writes(){
-			document.write()
-		}
+// this.test3=	function (){
+//			c++;
+//			document.write(c+",");
+//			
+//	
+//	}	
+//		
+//}
+//var a = new test2()
+// function test(){
+// 	alert('hello');
+//	setInterval(a.test3,200);
+//}
+window.onload=function(){
+	var p1 =document.getElementById('p1');
+	p1.style.position ='absolute';
+	p1.style.top=0;
+	p1.style.left =0;
+	movep();
+}
+var flagx =1;
+var flagy=1
+function movep(){
+	var p1 =document.getElementById('p1');
+	y=parseInt(p1.style.top);
+	x=parseInt( p1.style.left);
+	if(x>250){
+		flagx=-1;
+	}
+	if(y>100){
+		flagy=-1;
+	}
+	if(x<0){
+		flagx=1;
+	}
+	if(y<0){
+		flagy=1;
+	}
+	
+	x =x+flagx;
+	y =y+flagy;
+	
+	p1.style.top=y+'px';
+	p1.style.left=x+'px';
+	
+	var flush=setTimeout('movep()',50);
 }
