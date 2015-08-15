@@ -1,0 +1,53 @@
+body{
+	color:#fb5;
+	background-color: #344;
+}
+a:link{
+	color: #455;
+	background-color: #eb6;
+}
+a:visted{
+	color: #345;
+	background-color: #eb6;
+}
+a:HOVER {
+	color: #667;
+	background-color: #fb5
+}
+a:ACTIVE {
+	color: #778;
+	background-color: #ec8;
+}
+header{
+	color: #ec8;
+	background-color: #334;
+	border-color: #667;
+}
+header:nav{
+	color: #455;
+	background-color: #789;
+	border-color: #667;
+}
+article{
+	color: #223;
+	background-color: #edc;
+	border-color: #667;
+}
+header nav ul{
+	border-color: #99a;
+}
+header nav:HOVER {
+	color: #455;
+	border-color: #eb6;
+}
+header nav a:active{
+	color: #667;
+	background-color: #ec8;
+}
+article img{
+	border-color: #ba9;
+	outline-color: #dcb;
+}
+#imagegallery a{
+	background-color: transparent;
+}
