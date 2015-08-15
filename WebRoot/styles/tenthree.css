@@ -1,0 +1,10 @@
+body{
+	background-color: #ccc;
+}
+
+#slidimg{
+	width: 100px;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
