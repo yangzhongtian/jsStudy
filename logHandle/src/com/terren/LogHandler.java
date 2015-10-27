@@ -40,27 +40,27 @@ public class LogHandler {
 		int i=0;
 		while(stringTokenizer.hasMoreTokens()){
 			if( i==10){
-				String string = stringTokenizer.nextToken("[").trim();
-				System.out.println(string);
-			//	dealUserAgent(string);
+				String string =stringTokenizer.nextToken("").trim();
+				dealAgent(string);
+				break;
 			}else{
 				System.out.println(stringTokenizer.nextToken().trim());
 			}
 			i++;
+//			System.out.println(stringTokenizer.nextToken());
 		}
 	}
 	
-	public static void dealUserAgent(String str){
-		StringTokenizer stTokenizer= new StringTokenizer(str,"\"");
+	//对userAgent处理
+	public static void dealAgent(String str){
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println(str);
+		StringTokenizer str2= new StringTokenizer(str,"\"");
 		int z=0;
-		while (stTokenizer.hasMoreTokens()) {
-			if(z==0){
-				System.out.println(stTokenizer.nextToken());
-			}else{
-				System.out.println(stTokenizer.nextToken(" "));
+		while(str2.hasMoreTokens()){
+			if (z>0) {
+				System.out.println(str2.nextToken(" "));
 			}
-			z++;
 		}
 	}
-	
 }
