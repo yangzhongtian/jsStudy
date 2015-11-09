@@ -7,6 +7,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+
 import java.util.Properties;
 
 import com.mysql.jdbc.PreparedStatement;
@@ -17,12 +19,12 @@ public class jdbcUtil {
 	private static String user ="";
 	private static String password ="";
 	static Connection connection  =null;
-	 
+	
 	static{
-		InputStream inputStream =null;
-		inputStream =jdbcUtil.class.getResourceAsStream("jdbc.properties");
-		Properties properties = new Properties();
 		try {
+			InputStream inputStream =null;
+			inputStream =jdbcUtil.class.getClassLoader().getResourceAsStream("jdbc.properties");
+			Properties properties = new Properties();
 			properties.load(inputStream);
 			jdbcDriver =properties.getProperty("jdbcDriver");
 			jdbcUrl =properties.getProperty("jdbcUrl");
@@ -38,7 +40,7 @@ public class jdbcUtil {
 	public static Connection getConnection(){
 		try {
 			Class.forName(jdbcDriver);
-			connection= DriverManager.getConnection(jdbcUrl);
+			connection= DriverManager.getConnection(jdbcUrl,user,password);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -78,7 +80,7 @@ public class jdbcUtil {
 	}
 	
 	//关闭链接
-		static void closeAll(Statement statement ,Connection connection, ResultSet rs){
+		public static void closeAll(Statement statement ,Connection connection, ResultSet rs){
 			if(rs!=null){
 				try {
 					rs.close();
