@@ -15,15 +15,11 @@ public class insertDatabase {
 		try {
 			Connection connection=jdbcUtil.getConnection();
 			PreparedStatement psPreparedStatement =null;
-			psPreparedStatement = connection.prepareStatement("");
-			ResultSet rSet = psPreparedStatement.executeQuery();
-			while(rSet.next()){
-				System.out.println(rSet.getInt(1));
-				System.out.println(rSet.getString(2));
-				System.out.println(rSet.getString(3));
-			}
+			psPreparedStatement = connection.prepareStatement("insert into mylogs (contentid,url,title,pv) values (?,?,?,?)");
+			psPreparedStatement.executeQuery();
 			
-			jdbcUtil.closeAll(psPreparedStatement, connection, rSet);
+			
+			//jdbcUtil.closeAll(psPreparedStatement, connection);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
