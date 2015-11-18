@@ -15,7 +15,7 @@ import com.terren.NewsLog;
 
 public class DealLogUitl {
 	public static void  getLogList(String filestr){
-		List<NewsLog> list =ReadFileLine("/home/log/.china.com.cn.full_webdig_201408121640.log");
+		List<NewsLog> list =ReadFileLine("E:/FileWorkEcplise/.china.com.cn.full_webdig_201408121640.log");
 	}
 	
 	//按行读取文件
@@ -85,7 +85,7 @@ public class DealLogUitl {
 			
 			public static void  dealString(String temString,NewsLog newsLog){
 				String [] arr  = new String[8];
-				System.out.println(temString);
+			//	System.out.println(temString);
 				StringTokenizer stringTokenizer = new StringTokenizer(temString);
 				int i= 0;
 				while(stringTokenizer.hasMoreElements()){
@@ -124,10 +124,10 @@ public class DealLogUitl {
 							lo.setVisitType(stringTokenizer.nextToken());
 							break;
 						case 5:
-							lo.setUrl(stringTokenizer.nextToken());
+							lo.setUrl(stringTokenizer.nextToken().replace("\"",""));
 							break;
 						case 6:
-							lo.setRefer(stringTokenizer.nextToken());
+							lo.setRefer(stringTokenizer.nextToken().replace("\"",""));
 							break;
 						case 7:
 							lo.setLength(stringTokenizer.nextToken());

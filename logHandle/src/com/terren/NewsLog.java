@@ -1,7 +1,10 @@
 package com.terren;
 
+import java.util.Set;
+
 public class NewsLog {
 	private String time; //时间
+	private long uv;
 	private String Ip;   //ip地址
 	private String cookie; //cookie
 	private String visitType;// 0:新访 and 1:回访  
@@ -16,6 +19,8 @@ public class NewsLog {
 	private  String showType;
 	private  String area;
 	private  String  other;
+	private long pv;
+	private Set<String> set;
 	public String getTime() {
 		return time;
 	}
@@ -111,4 +116,23 @@ public class NewsLog {
 	public NewsLog() {
 		// TODO Auto-generated constructor stub
 	}
+	public long getUv() {
+		return uv;
+	}
+	public void setUv(long uv) {
+		this.uv = uv;
+	}
+	public long getPv() {
+		return pv;
+	}
+	public void setPv(long pv) {
+		this.pv = pv;
+	}
+	public Set<String> getSet() {
+		return set;
+	}
+	public void setSet(Set<String> set) {
+		this.set = set;
+	}
+	
 }
